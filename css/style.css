@@ -1,0 +1,89 @@
+body {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../assets/bg.jpg);
+    height: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+/* header - nav */
+
+header {
+    display: flex;
+}
+
+.contact {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sub {
+    text-decoration: none;
+    color: white;
+    margin-right:60px;
+    font-size: 0.8rem;
+}
+
+.contact>a img {
+    height: 40px;
+    margin: 5px;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 0.7rem;
+}
+
+.nav ul li {
+    background: rgb(166, 53, 53);
+    width: 23%;
+    padding: 7px 0;
+    text-align: center;
+    box-shadow: 1px 2px lightgray;
+}
+
+li:before, li:after {
+    content: "-";
+    padding: 0 10px;
+}
+
+/* jumbotron */
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* width: 98%; */
+}
+
+.jumbotron {
+    display: flex;
+    align-items: center;
+    height: 225px;
+    width: 97%;
+    margin-top: 25px;
+    position: relative;
+    background-image: url(../assets/grid.png), url(../assets/top-image.png);
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 5px solid white;
+}
+
+.jumbotron:after {
+    content: "";
+    height: 225px;
+    width: 100%;
+    position: absolute;
+    opacity: 0.1;
+    z-index: 10;
+    background-image: url(../assets/grid.png);
+}
+
+.jumbotron img {
+    height: 75%;
+    padding-left: 15px;
+}
