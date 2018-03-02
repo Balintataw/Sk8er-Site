@@ -1,6 +1,6 @@
 body {
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../assets/bg.jpg);
-    height: 800px;
+    height: 1000px;
     background-size: cover;
     background-repeat: no-repeat;
     font-size: 16px;
@@ -105,6 +105,7 @@ li:before, li:after {
     display: flex;
     justify-content: space-between;
     width: 76%;
+    margin: 50px 0;
 }
 
 .article {
@@ -113,15 +114,18 @@ li:before, li:after {
     justify-content: space-between;
     background: #fff;
     height: 225px;
-    margin: 10px 1px;
     padding: 10px;
     text-align: left;
     width: 30%;
 } 
 
+.article:nth-child(2) {
+    margin: 0px 8px;
+}
+
 .article h1 {
     font-weight: 200;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-bottom: 12px;
     line-height: 1.3em;
     height: 40%;
@@ -135,7 +139,6 @@ li:before, li:after {
 }
 
 .article-text {
-    /* display: block; */
     height: 30%;
     color: rgb(138,138,138);
     font-weight: 200;
@@ -155,4 +158,66 @@ li:before, li:after {
     text-decoration: none;
     color: rgb(158, 0, 28);
     padding-top: 12px;
+}
+
+/* skater profile section */
+
+.profiles {
+    display: flex;
+    width: 76.5%;
+    justify-content: space-between;
+}
+
+.profiles-left {
+    display: flex;
+    flex-direction: column;
+    width: 68%;
+}
+
+.profiles-left-top {
+    display: flex;
+}
+
+.profiles div {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.lance {
+    height: 150px;
+    width: 100%;
+    background-image: url(../assets/sk8er-4.png);
+}
+
+.rodney{
+    height: 150px;
+    width: 100%;
+    margin: 0 8px 8px 8px;
+    background-image: url(../assets/sk8er-3.png);
+}
+
+
+.steve {
+    height: 150px;
+    margin-right: 8px;
+    background-image: url(../assets/sk8er-1.png);
+}
+
+.lance, .rodney, .tommy, .steve {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tommy {
+    height: auto;
+    width: 32.5%;
+    background-image: url(../assets/sk8er-2.png);
+    background-position: -172px 0px;
 }
