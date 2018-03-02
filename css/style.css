@@ -33,7 +33,8 @@ header {
     text-decoration: none;
     color: white;
     margin-right:60px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    font-weight: 100;
 }
 
 .contact>a img {
@@ -41,22 +42,40 @@ header {
     margin: 5px;
 }
 
-.nav ul{
+.nav {
     display: flex;
     justify-content: space-around;
-    color: white;
     font-size: 0.7rem;
 }
 
-.nav ul li {
+.nav a{
     background: rgb(166, 53, 53);
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
     width: 23%;
     padding: 7px 0;
     text-align: center;
-    box-shadow: 1px 2px lightgray;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 1px 0 rgb(153, 151, 151);
+       -moz-box-shadow: 1px 1px 1px 0 rgb(153, 151, 151);
+            box-shadow: 1px 1px 1px 0 rgb(153, 151, 151);
 }
 
-li:before, li:after {
+.nav a:active {
+    color: rgb(189, 189, 189);
+    background: rgb(196, 69, 69);
+    -webkit-box-shadow: inset 1px 1px 6px rgb(153, 151, 151);
+       -moz-box-shadow: inset 1px 1px 6px rgb(153, 151, 151);
+            box-shadow: inset 1px 1px 6px rgb(153, 151, 151);
+}
+
+.nav a:hover {
+    background: rgb(204, 41, 41);
+    
+}
+
+.nav a:before, .nav a:after {
     content: "-";
     padding: 0 10px;
 }
@@ -66,7 +85,7 @@ li:before, li:after {
 .container {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 75%;
 }
 
 .jumbotron {
@@ -74,14 +93,15 @@ li:before, li:after {
     justify-content: flex-start;
     align-items: center;
     height: 225px;
-    width: 75%;
+    width: 100%;
     margin-top: 25px;
     position: relative;
     background-image: url(../assets/top-image.png);
-    background-size: auto;
+    background-size: 1100px 650px;
     background-repeat: no-repeat;
-    background-position: -100px -100px;
+    background-position: -80px -125px;
     border: 5px solid white;
+    box-shadow: 1px 2px rgb(153, 151, 151);
 }
 
 .jumbotron:after {
@@ -89,7 +109,7 @@ li:before, li:after {
     height: 225px;
     width: 100%;
     position: absolute;
-    opacity: 0.6;
+    opacity: 0.3;
     z-index: 10;
     background-image: url(../assets/grid.png);
 }
@@ -104,7 +124,7 @@ li:before, li:after {
 .articles {
     display: flex;
     justify-content: space-between;
-    width: 76%;
+    width: 75%;
     margin: 50px 0;
 }
 
@@ -117,6 +137,7 @@ li:before, li:after {
     padding: 10px;
     text-align: left;
     width: 30%;
+    box-shadow: 1px 2px rgb(153, 151, 151);
 } 
 
 .article:nth-child(2) {
@@ -124,11 +145,12 @@ li:before, li:after {
 }
 
 .article h1 {
-    font-weight: 200;
+    font-weight: 500;
     font-size: 1.3rem;
     padding-bottom: 12px;
     line-height: 1.3em;
     height: 40%;
+    color: rgb(59, 59, 59);
 }
 
 .date {
@@ -154,7 +176,7 @@ li:before, li:after {
 .article a {
     align-items: flex-end;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-decoration: none;
     color: rgb(158, 0, 28);
     padding-top: 12px;
@@ -164,7 +186,7 @@ li:before, li:after {
 
 .profiles {
     display: flex;
-    width: 76.5%;
+    width: 75%;
     justify-content: space-between;
 }
 
@@ -179,10 +201,14 @@ li:before, li:after {
 }
 
 .profiles div {
-    color: white;
     text-align: center;
     font-size: 2rem;
     font-weight: 800;
+}
+
+.profiles a {
+    color: white;
+    text-decoration: none;
 }
 
 .lance {
@@ -213,6 +239,7 @@ li:before, li:after {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: 1px 2px rgb(153, 151, 151);
 }
 
 .tommy {
@@ -229,13 +256,108 @@ li:before, li:after {
     justify-content: center;
     align-items: center;
     height: 250px;
-    width: 76%;
+    width: 75%;
     margin: 40px 0;
     padding: 15px 0;
     background: white;
+    box-shadow: 1px 2px rgb(153, 151, 151);
 }
 
 .board {
     width: 8%;
-    padding: 0px 6px;
+    padding: 0px 5px;
+}
+
+/* contact section */
+
+.contact-section {
+    display: flex;
+    height: 270px;
+    width: 75%;
+    background: white;
+    margin-bottom: 70px;
+    box-shadow: 1px 2px rgb(153, 151, 151);
+}
+
+.contact-info {
+    width: 50%;
+    color: rgb(138,138,138);
+    padding: 25px;
+}
+
+.contact-info h3 {
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding-bottom: 12px;
+    color: rgb(59, 59, 59);
+}
+
+.contact-info p {
+    color: rgb(110, 110, 110);
+    font-weight: 200;
+    font-size: 0.8rem;
+    line-height: 2em;
+    padding-bottom: 12px;
+}
+
+.contact-section-icons>a img {
+    height: 20px;
+    margin: 2px;
+}
+
+.contact-form {
+    width: 50%;
+    padding: 25px;
+}
+
+::placeholder {
+    color: rgb(153, 151, 151);
+}
+
+.contact-form form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 5px;
+    outline: 0;
+    border: 2px solid rgb(201, 199, 199);
+    border-top: 3px solid rgb(209, 209, 209);
+    border-left: 3px solid rgb(153, 151, 151);
+}
+
+input[name="email"] {
+    margin: 10px 0;
+}
+
+textarea {
+    height: 70px;
+}
+
+button {
+    position: absolute;
+    top: 150px;
+    right: 0;
+    background: rgb(166, 53, 53);
+    color: white;
+    width: 60%;
+    margin-top: 20px;
+    padding: 5px 0;
+    text-align: center;
+    outline: 0;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 1px 0 rgb(153, 151, 151);
+       -moz-box-shadow: 1px 1px 1px 0 rgb(153, 151, 151);
+            box-shadow: 1px 1px 1px 0 rgb(153, 151, 151);
+}
+
+button:active {
+    color: rgb(189, 189, 189);
+    background: rgb(196, 69, 69);
+    -webkit-box-shadow: inset 1px 1px 6px rgb(153, 151, 151);
+       -moz-box-shadow: inset 1px 1px 6px rgb(153, 151, 151);
+            box-shadow: inset 1px 1px 6px rgb(153, 151, 151);
+    
 }
