@@ -7,10 +7,20 @@ body {
     font-family: sans-serif;
 }
 
+.master-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
 /* header - nav */
 
 header {
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
 }
 
 .contact {
@@ -56,20 +66,21 @@ li:before, li:after {
 .container {
     display: flex;
     justify-content: center;
-    /* width: 98%; */
+    width: 100%;
 }
 
 .jumbotron {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     height: 225px;
-    width: 97%;
+    width: 75%;
     margin-top: 25px;
     position: relative;
-    background-image: url(../assets/grid.png), url(../assets/top-image.png);
-    /* background-size: cover; */
+    background-image: url(../assets/top-image.png);
+    background-size: auto;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: -100px -100px;
     border: 5px solid white;
 }
 
@@ -78,7 +89,7 @@ li:before, li:after {
     height: 225px;
     width: 100%;
     position: absolute;
-    opacity: 0.1;
+    opacity: 0.6;
     z-index: 10;
     background-image: url(../assets/grid.png);
 }
@@ -86,4 +97,62 @@ li:before, li:after {
 .jumbotron img {
     height: 75%;
     padding-left: 15px;
+}
+
+/* articles section */
+
+.articles {
+    display: flex;
+    justify-content: space-between;
+    width: 76%;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    height: 225px;
+    margin: 10px 1px;
+    padding: 10px;
+    text-align: left;
+    width: 30%;
+} 
+
+.article h1 {
+    font-weight: 200;
+    font-size: 1.5rem;
+    padding-bottom: 12px;
+    line-height: 1.3em;
+    height: 40%;
+}
+
+.date {
+    color: rgb(214, 214, 214);
+    font-weight: 200;
+    font-size: 0.8rem;
+    padding-bottom: 12px;
+}
+
+.article-text {
+    /* display: block; */
+    height: 30%;
+    color: rgb(138,138,138);
+    font-weight: 200;
+    font-size: 0.5rem;
+    line-height: 2em;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.article a {
+    align-items: flex-end;
+    text-align: center;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: rgb(158, 0, 28);
+    padding-top: 12px;
 }
